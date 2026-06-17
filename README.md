@@ -25,10 +25,10 @@ When doing these exercises, please use all documentation and resources you need 
 - [x] Margin and padding II
 
 **Flex**
-- [ ] Flex center
-- [ ] Flex header I
-- [ ] Flex header II
-- [ ] Flex information
+- [x] Flex center
+- [x] Flex header I
+- [x] Flex header II
+- [x] Flex information
 - [ ] Flex modal
 - [ ] Flex layout I
 - [ ] Flex layout II
