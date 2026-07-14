@@ -9,17 +9,26 @@ function getComputerChoice() {
     }
 }
 
+const btnRocks = document.querySelector(".btnRocks");
+btnRocks.addEventListener("click", function() {
+    const computerChoice = getComputerChoice();
+    const playerSelection = "Rock";
+    playRound(playerSelection, computerChoice)});
+
+const btnPaper = document.querySelector(".btnPaper");
+btnPaper.addEventListener("click", function() {
+    const computerChoice = getComputerChoice();
+    const playerSelection = "Paper";
+    playRound(playerSelection, computerChoice)});
+
+const btnScissors = document.querySelector(".btnScissors");
+btnScissors.addEventListener("click", function() {
+    const computerChoice = getComputerChoice();
+    const playerSelection = "Scissors";
+    playRound(playerSelection, computerChoice)});
+
 function getHumanChoice () {
-    const humanChoice = prompt("rock, paper or scissors?").toLowerCase();
-    if (humanChoice === "rock") {
-        return "Rock";
-    } else if (humanChoice === "paper") {
-        return "Paper";
-    } else if (humanChoice === "scissors") {
-        return "Scissors";
-    } else {
-        return "Invalid input. Please enter rock, paper, or scissors.";
-    }
+    
 }
 
 function playGame () {
@@ -50,7 +59,7 @@ function playGame () {
         computerScore += 1;
     }}
 
-    for (let round = 0; round < 5; round++) {
+    /*for (let round = 0; round < 5; round++) {
         const computerChoice = getComputerChoice();
         const humanChoice = getHumanChoice();
         console.log(computerChoice);
@@ -62,7 +71,7 @@ function playGame () {
         incrementScore(roundResult);
         console.log(roundResult);
         console.log("You: " + humanScore + " Computer: " + computerScore);
-    } 
+    } */
 }
 
 function finalScore(humanScore, computerScore) {
