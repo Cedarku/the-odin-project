@@ -27,24 +27,20 @@ btnScissors.addEventListener("click", function() {
     const playerSelection = "Scissors";
     playRound(playerSelection, computerChoice)});
 
-function getHumanChoice () {
-    
-}
-
 function playGame () {
-    let humanScore = 0;
+    let playerScore = 0;
     let computerScore = 0;
 
-    function playRound(humanChoice, computerChoice) {
+    function playRound(playerSelection, computerChoice) {
     if (
-        (humanChoice === "Rock" && computerChoice === "Scissors") ||
-        (humanChoice === "Paper" && computerChoice === "Rock") ||
-        (humanChoice === "Scissors" && computerChoice === "Paper")
+        (playerSelection === "Rock" && computerChoice === "Scissors") ||
+        (playerSelection === "Paper" && computerChoice === "Rock") ||
+        (playerSelection === "Scissors" && computerChoice === "Paper")
     ) { return "You win!"; }
     else if (
-        (humanChoice === "Rock" && computerChoice === "Rock") ||
-        (humanChoice === "Paper" && computerChoice === "Paper") ||
-        (humanChoice === "Scissors" && computerChoice === "Scissors")
+        (playerSelection === "Rock" && computerChoice === "Rock") ||
+        (playerSelection === "Paper" && computerChoice === "Paper") ||
+        (playerSelection === "Scissors" && computerChoice === "Scissors")
       ) { return "It's a draw!"; }
     else { return "You lose!"; }
     }
@@ -54,31 +50,31 @@ function playGame () {
     const loseMessage = "You lose!";
     
     if (roundResult === winMessage) {
-        humanScore += 1;
+        playerScore += 1;
     } else if (roundResult === loseMessage) {
         computerScore += 1;
     }}
 
     /*for (let round = 0; round < 5; round++) {
         const computerChoice = getComputerChoice();
-        const humanChoice = getHumanChoice();
+        const playerSelection = getplayerSelection();
         console.log(computerChoice);
-        console.log(humanChoice);
+        console.log(playerSelection);
 
-        playRound(humanChoice, computerChoice)
+        playRound(playerSelection, computerChoice)
 
-        const roundResult = playRound(humanChoice, computerChoice);
+        const roundResult = playRound(playerSelection, computerChoice);
         incrementScore(roundResult);
         console.log(roundResult);
-        console.log("You: " + humanScore + " Computer: " + computerScore);
+        console.log("You: " + playerScore + " Computer: " + computerScore);
     } */
 }
 
-function finalScore(humanScore, computerScore) {
+function finalScore(playerScore, computerScore) {
     const finalMessage = "Final result: ";
-    if (humanScore > computerScore) {
+    if (playerScore > computerScore) {
         return finalMessage + "Congratulations, you win!";
-    } else if (humanScore < computerScore) {
+    } else if (playerScore < computerScore) {
         return finalMessage + "You lose.";
     } else {
         return finalMessage + "It's a draw.";
