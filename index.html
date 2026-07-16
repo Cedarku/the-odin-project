@@ -9,7 +9,29 @@
     <button class="btnRock">Rock</button>
     <button class="btnPaper">Paper</button>
     <button class="btnScissors">Scissors</button>
-    <div class="resultDisplay"></div>
+        <table id="display">
+            <tr>
+                <th>You</th>
+                <th> | </th>
+                <th>Computer</th>
+            </tr>
+            <tr>
+                <td id="playerChoice"></td>
+                <td>VS</td>
+                <td id="computerChoice"></td>
+            </tr>
+            <tr>
+                <td id="roundResult"></td>
+            </tr>
+            <tr>
+                <td>Results:</td>
+            </tr>
+            <tr>
+                <td id="playerScore">0</td>
+                <td> | </td>
+                <td id="computerScore">0</td>
+            </tr>
+        </table>
     <script src="script.js"></script>
 </body>
 </html>
