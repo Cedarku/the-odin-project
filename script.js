@@ -29,7 +29,8 @@ function playGame(playerChoice) {
     incrementScore(roundResult);
     console.log(roundResult);
     console.log("You: " + playerScore + " Computer: " + computerScore);
-    updateDisplay(playerChoice, computerChoice, roundResult, playerScore, computerScore)
+    updateDisplay(playerChoice, computerChoice, roundResult, playerScore, computerScore);
+    finalScore(playerScore, computerScore)
 }
 
 function playRound(playerChoice, computerChoice) {
@@ -37,46 +38,62 @@ function playRound(playerChoice, computerChoice) {
         (playerChoice === "Rock" && computerChoice === "Scissors") ||
         (playerChoice === "Paper" && computerChoice === "Rock") ||
         (playerChoice === "Scissors" && computerChoice === "Paper")
-    ) { return "You win!"; }
+    ) { return "You win this round!"; }
     else if (
         (playerChoice === "Rock" && computerChoice === "Rock") ||
         (playerChoice === "Paper" && computerChoice === "Paper") ||
         (playerChoice === "Scissors" && computerChoice === "Scissors")
       ) { return "It's a draw!"; }
-    else { return "You lose!"; }
+    else { return "You lose this round!"; }
     }
 
 function incrementScore(roundResult) {
-    const winMessage = "You win!";
-    const loseMessage = "You lose!";
-    if (roundResult === winMessage) {
+    const roundWinMessage = "You win this round!";
+    const roundLoseMessage = "You lose this round!";
+    if (roundResult === roundWinMessage) {
         playerScore += 1;
-    } else if (roundResult === loseMessage) {
+    } else if (roundResult === roundLoseMessage) {
         computerScore += 1;
     }
 }
 
 function updateDisplay(playerChoice, computerChoice, roundResult, playerScore, computerScore) {
-    const playerChoiceCell = document.querySelector("#playerChoice");
-    const computerChoiceCell = document.querySelector("#computerChoice");
-    const roundResultCell = document.querySelector("#roundResult");
-    const playerScoreCell = document.querySelector("#playerScore");
-    const computerScoreCell = document.querySelector("#computerScore");
+        const playerChoiceCell = document.getElementById("playerChoice");
+        const computerChoiceCell = document.getElementById("computerChoice");
+        const roundResultCell = document.getElementById("roundResult");
+        const playerScoreCell = document.getElementById("playerScore");
+        const computerScoreCell = document.getElementById("computerScore");
 
-    playerChoiceCell.textContent = playerChoice;
-    computerChoiceCell.textContent = computerChoice;
-    roundResultCell.textContent = roundResult;
-    playerScoreCell.textContent = playerScore;
-    computerScoreCell.textContent = computerScore;
+        playerChoiceCell.textContent = playerChoice;
+        computerChoiceCell.textContent = computerChoice;
+        roundResultCell.textContent = roundResult;
+        playerScoreCell.textContent = playerScore;
+        computerScoreCell.textContent = computerScore;
+}
+
+function finalScore(playerScore, computerScore) {
+    if (playerScore === 5) {
+        const tableDisplay = document.getElementById("display");
+        tableDisplay.style.display = "none";
+        const finalMessage = document.getElementById("finalMessage");
+        finalMessage.textContent = "You win!";
+    } else if (computerScore === 5) {
+        const tableDisplay = document.getElementById("display");
+        tableDisplay.style.display = "none";
+        const finalMessage = document.getElementById("finalMessage");
+        finalMessage.textContent = "You lose!";
+    } else {
+        return;
+    }
+
+    btnRock.disabled = true;
+    btnPaper.disabled = true;
+    btnScissors.disabled = true;
 }
 
 
 
-
-
 /*
-
-
     for (let round = 0; round < 5; round++) {
         const computerChoice = getComputerChoice();
         const playerChoice = getplayerChoice();
@@ -106,6 +123,4 @@ function finalScore(playerScore, computerScore) {
 playGame();
 console.log(finalScore());
 */
-
-
 
