@@ -10,6 +10,11 @@ btnPaper.addEventListener("click", () => playGame("Paper"));
 const btnScissors = document.querySelector(".btnScissors");
 btnScissors.addEventListener("click", () => playGame("Scissors"));
 
+const btnReplay = document.querySelector(".btnReplay");
+btnReplay.style.display = "none";
+btnReplay.addEventListener("click", () => { location.reload() });
+
+
 function getComputerChoice() {
     const computerChoice = Math.floor(Math.random() * 3);
     if (computerChoice === 0) {
@@ -89,6 +94,7 @@ function finalScore(playerScore, computerScore) {
     btnRock.disabled = true;
     btnPaper.disabled = true;
     btnScissors.disabled = true;
+    btnReplay.style.display = "";
 }
 
 
