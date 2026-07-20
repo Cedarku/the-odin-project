@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 0px;
+    width: 480px;
+    height: 480px;
+}
+
+.square {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #d8d6e5;
+    box-sizing: border-box;
+}
