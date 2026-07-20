@@ -19,6 +19,9 @@ function createGrid(size) {
     for (let i = 0; i < numSquares; i++) {
         const square = document.createElement("div");
         square.classList.add("square");
+        const squareSize = 480 / size;
+        square.style.width = `${squareSize}px`;
+        square.style.height = `${squareSize}px`;
         grid.appendChild(square);
 
         square.addEventListener("mouseenter", () => {
@@ -28,16 +31,3 @@ function createGrid(size) {
 }
 
 createGrid(16);
-
-/*
-// Create the grid
-for (let i = 0; i < 256; i++) {
-    const square = document.createElement("div");
-    square.classList.add("square");
-    grid.appendChild(square);
-
-    square.addEventListener("mouseenter", () => {
-    square.style.backgroundColor= "black";}
-    );
-}
-*/
