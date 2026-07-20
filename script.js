@@ -2,13 +2,22 @@ const grid = document.querySelector(".grid");
 const btnSize = document.querySelector(".btnSize");
 
 btnSize.addEventListener("click", () => {
-    createGrid(getSize())}
-);
+    const size = getSize();
+    if (size === null) {
+        return;
+    }
+    createGrid(size);
+});
 
 function getSize() {
+    let input;
     let size;
     do {
-        size = Number(prompt("Enter the number of squares per side (1-100):"));
+        input = prompt("Enter the number of squares per side (1-100):");
+        if (input === null) {
+            return null;
+        }
+        size = Number(input);
         if (!Number.isInteger(size) || size < 1 || size > 100) {
             alert("Please enter a whole number between 1 and 100.");
         }
