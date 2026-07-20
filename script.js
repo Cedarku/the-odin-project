@@ -1,15 +1,19 @@
 const grid = document.querySelector(".grid");
 const btnSize = document.querySelector(".btnSize");
 
-// Button function
 btnSize.addEventListener("click", () => {
-    let size = getSize();
-    createGrid(size)}
+    createGrid(getSize())}
 );
 
-// Get size
 function getSize() {
-    return prompt("Enter the number of squares per side (max 100):");
+    let size;
+    do {
+        size = Number(prompt("Enter the number of squares per side (1-100):"));
+        if (!Number.isInteger(size) || size < 1 || size > 100) {
+            alert("Please enter a whole number between 1 and 100.");
+        }
+    } while (!Number.isInteger(size) || size < 1 || size > 100);
+    return size;
 }
 
 function createGrid(size) {
