@@ -37,10 +37,17 @@ function createGrid(size) {
         square.style.height = `${squareSize}px`;
         grid.appendChild(square);
 
-        square.addEventListener("mouseenter", () => {
-        square.style.backgroundColor= "black";}
-    );
+        square.addEventListener("mouseenter", paintSquare);
+    }
 }
+
+function paintSquare(event) {
+    const square = event.target;
+    if (RandomMode) {
+        square.style.backgroundColor = getRandomColor();
+    } else {
+        square.style.backgroundColor = "black";
+    }
 }
 
 createGrid(16);
