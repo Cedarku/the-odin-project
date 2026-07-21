@@ -15,6 +15,7 @@ Users can sketch by hovering over the grid, generate a new grid with a custom si
 * 🔄 Dynamic grid regeneration without refreshing the page
 * ✅ Input validation with graceful handling of invalid values and prompt cancellation
 * 📱 Responsive square sizing that always fits the drawing area
+* 🌈 Rainbow Mode switch
 
 ## Built With
 
