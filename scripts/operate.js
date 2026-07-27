@@ -11,7 +11,7 @@ export function operate(operator, a, b) {
             return substract(a, b);
         case "*":
             return multiply(a, b);
-        case "/":
+        case "÷":
             return divide(a, b);
         default:
             return null;
