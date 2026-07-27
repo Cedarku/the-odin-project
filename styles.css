@@ -1,24 +1,44 @@
-/* --- Variables de Colores Pastel --- */
+/* --- Color palette --- */
 :root {
-  --bg-color: #fff5f7;            /* Rosa muy clarito */
-  --bg-dots: #fcd5ce;             /* Color pastel para los lunares del fondo */
-  --frog-skin: #b7e4c7;           /* Verde rana pastel */
-  --frog-dark: #74c69d;           /* Borde verde */
-  --screen-bg: #e8f5e9;           /* Fondo pantalla */
+  --bg-color: #fff5f7;            
+  --bg-dots: #fcd5ce;             
+  --frog-skin: #b7e4c7;           
+  --frog-dark: #74c69d;           
+  --screen-bg: #e8f5e9;           
   --btn-num: #ffffff;
   --btn-operator: #d8f3dc;
   --btn-equals: #ffb7b2;
   --btn-clear: #fde1dc;
   --text-color: #2d6a4f;
-  --blush-color: #ffb3c1;        /* Coloretes rosa */
+  --blush-color: #ffb3c1;        
   --footer-text: #9a8c98;
 }
+
+/* Fonts */
+.bitcount-grid-single-<uniquifier> {
+  font-family: "Bitcount Grid Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+.cherry-bomb-one-regular {
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Cherry Bomb One", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -102,6 +122,7 @@ body {
 }
 
 .display {
+  font-family: "Bitcount Grid Single";
   font-size: 2.2rem;
   font-weight: bold;
   color: var(--text-color);
