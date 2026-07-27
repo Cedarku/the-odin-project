@@ -8,7 +8,7 @@
   --btn-num: #ffffff;
   --btn-operator: #d8f3dc;
   --btn-equals: #ffb7b2;
-  --btn-clear: #ffdac1;
+  --btn-clear: #fde1dc;
   --text-color: #2d6a4f;
   --blush-color: #ffb3c1;        /* Coloretes rosa */
   --footer-text: #9a8c98;
@@ -48,13 +48,13 @@ body {
   display: flex;
   justify-content: space-between;
   width: 280px;         /* Separación amplia entre ojos */
-  margin-bottom: -35px; /* Hace que se solapen con el cuerpo */
+  margin-bottom: -40px; /* Hace que se solapen con el cuerpo */
   z-index: 1;           /* Por detrás del cuerpo que tendrá z-index: 2 */
 }
 
 .eye {
-  width: 75px;
-  height: 75px;
+  width: 90px;
+  height: 90px;
   background-color: var(--frog-skin);
   border-radius: 50%;
   border: 5px solid var(--frog-dark);
