@@ -1,0 +1,171 @@
+/* --- Variables de Colores Pastel --- */
+:root {
+  --bg-color: #fff5f7;            /* Rosa muy clarito */
+  --bg-dots: #fcd5ce;             /* Color pastel para los lunares del fondo */
+  --frog-skin: #b7e4c7;           /* Verde rana pastel */
+  --frog-dark: #74c69d;           /* Borde verde */
+  --screen-bg: #e8f5e9;           /* Fondo pantalla */
+  --btn-num: #ffffff;
+  --btn-operator: #d8f3dc;
+  --btn-equals: #ffb7b2;
+  --btn-clear: #ffdac1;
+  --text-color: #2d6a4f;
+  --blush-color: #ffb3c1;        /* Coloretes rosa */
+  --footer-text: #9a8c98;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  /* Patrón de lunares sutiles en tono rosa */
+  background-image: radial-gradient(var(--bg-dots) 2px, transparent 1px);
+  background-size: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px 20px 20px;
+}
+
+/* --- Contenedor Principal --- */
+.frog-calculator-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+/* Ojos insinuados por DETRÁS de la calculadora */
+.frog-eyes {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;         /* Separación amplia entre ojos */
+  margin-bottom: -35px; /* Hace que se solapen con el cuerpo */
+  z-index: 1;           /* Por detrás del cuerpo que tendrá z-index: 2 */
+}
+
+.eye {
+  width: 75px;
+  height: 75px;
+  background-color: var(--frog-skin);
+  border-radius: 50%;
+  border: 5px solid var(--frog-dark);
+}
+
+/* Cuerpo de la Ranita (más ancha) */
+.calculator {
+  background-color: var(--frog-skin);
+  border: 5px solid var(--frog-dark);
+  border-radius: 45px;
+  padding: 25px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.06);
+  width: 380px;         /* ¡Más ancha! */
+  position: relative;
+  z-index: 2;           /* Cubre la parte inferior de los ojos */
+}
+
+/* Fila de Pantalla y Coloretes */
+.screen-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+/* Coloretes redondos a los lados */
+.cheek {
+  width: 30px;
+  height: 30px;
+  background-color: var(--blush-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+/* Pantalla de cálculo */
+.display-container {
+  flex-grow: 1;
+  background-color: var(--screen-bg);
+  border: 3px solid var(--frog-dark);
+  border-radius: 20px;
+  padding: 12px 18px;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.display {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: right;
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Botones */
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  background-color: var(--btn-num);
+  color: var(--text-color);
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 0px var(--frog-dark);
+  transition: all 0.1s ease;
+  user-select: none;
+}
+
+.btn:hover {
+  filter: brightness(0.98);
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0px 0px 0px var(--frog-dark);
+}
+
+.btn-operator, .btn-utility {
+  background-color: var(--btn-operator);
+}
+
+.btn-danger {
+  background-color: var(--btn-clear);
+}
+
+.btn-equals {
+  background-color: var(--btn-equals);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--footer-text);
+  letter-spacing: 0.5px;
+}
