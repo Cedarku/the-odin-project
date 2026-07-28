@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors!</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Rock • Paper • Scissors</h1>
+    
+    <div class="choiceMenu">
+        <p>Make your choice:</p>
+        <div class="buttons">
+            <button class="btnRock">✊</button>
+            <button class="btnPaper">🖐️</button>
+            <button class="btnScissors">✌️</button>
+        </div>
+    </div>
+
+    <table id="display">
+        <tr>
+            <th>You</th>
+            <th>|</th>
+            <th>Computer</th>
+        </tr>
+        <tr>
+            <td id="playerChoice"></td>
+            <td id="vs">VS</td>
+            <td id="computerChoice"></td>
+        </tr>
+        <tr>
+            <td colspan="3" id="roundResult"></td>
+        </tr>
+        <tr>
+            <td colspan="3">Score:</td>
+        </tr>
+        <tr>
+            <td id="playerScore">0</td>
+            <td>-</td>
+            <td id="computerScore">0</td>
+        </tr>
+    </table>
+
+    <h2 id="finalMessage"></h2>
+
+    <div class="finalScoreTable">
+        <div class="finalScoreHeader">
+            <span>You</span>
+            <span>Computer</span>
+        </div>
+        <div class="finalScoreBody">
+            <span id="finalPlayerScore">0</span>
+            <span id="finalComputerScore">0</span>
+        </div>
+    </div>
+
+    <button class="btnReplay">🔄 Play Again</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
