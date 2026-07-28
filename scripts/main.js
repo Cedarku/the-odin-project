@@ -15,7 +15,15 @@ let shouldResetDisplay = false;
 
 function updateDisplay() {
     const fullExpression = a + operator + b;
-    display.textContent = fullExpression === "" ? "0" : fullExpression;
+    const displayText = fullExpression === "" ? "0" : fullExpression;
+    display.textContent = displayText;
+    if (displayText.length > 19) {
+        display.style.fontSize = "1.5rem";
+    } else if (displayText.length > 9) {
+        display.style.fontSize = "1.8rem";
+    } else {
+        display.style.fontSize = "2.2rem"; // Tamaño por defecto
+    }
 }
 
 function handleNumber(number) {
