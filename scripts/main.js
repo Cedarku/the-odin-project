@@ -4,13 +4,16 @@ const display = document.querySelector(".display");
 const btnNumber = document.querySelectorAll(".btn-number");
 const btnOperator = document.querySelectorAll(".btn-operator");
 const btnEquals = document.querySelector(".btn-equals");
+const btnClearEntry = document.querySelector(".btn-utility");
+const btnAllClear = document.querySelector(".btn-danger");
 
 let a = "";
 let b = "";
 let operator = "";
 
 function updateDisplay() {
-    display.textContent = `${a}${operator}${b}`;
+    const fullExpression = a + operator + b;
+    display.textContent = fullExpression === "" ? "0" : fullExpression;
 }
 
 function handleNumber(number) {
@@ -62,4 +65,26 @@ btnOperator.forEach(button => {
 
 if (btnEquals) {
     btnEquals.addEventListener("click", handleEquals);
+}
+
+if (btnAllClear) {
+    btnAllClear.addEventListener("click", () => {
+        a = "";
+        b = "";
+        operator = "";
+        updateDisplay();
+    });
+}
+
+if (btnClearEntry) {
+    btnClearEntry.addEventListener("click", () => {
+         if(b !== "") {
+            b = b.slice(0, -1);
+         } else if(operator !== "") {
+            operator = "";
+         } else if(a !== "") {
+            a = a.slice(0, -1);
+         }
+         updateDisplay();
+    });
 }
