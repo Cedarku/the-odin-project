@@ -10,7 +10,7 @@ The main objective of this project is to build a functional calculator from scra
     <tr>
         <td align="center">
         <img src="assets/kawaii-calculator.png" width="400"><br>
-        👉 <a href="https://cedarku.github.io/calculator/"><strong>View Live Demo</strong></a> <em>Coming soon</em>
+        👉 <a href="https://cedarku.github.io/calculator/"><strong>View Live Demo</strong></a>
         </td>
     </tr>
 </table>
