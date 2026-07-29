@@ -1,4 +1,4 @@
-# 🚀 The Odin Project — My Learning Journey
+# The Odin Project — My Learning Journey
 
 Welcome to my personal archive documenting my path through [The Odin Project](https://www.theodinproject.com/). 
 
