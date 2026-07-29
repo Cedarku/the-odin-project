@@ -7,12 +7,12 @@ A modern browser-based implementation of the classic **Rock Paper Scissors** gam
 <table>
 <tr>
 <td align="center">
-<img src="screenshots/gameplay.png" width="400"><br>
+<img src="./screenshots/gameplay.png" width="400"><br>
 Gameplay
 </td>
 
 <td align="center">
-<img src="screenshots/game-over.png" width="400"><br>
+<img src="./screenshots/game-over.png" width="400"><br>
 Game Over
 </td>
 </tr>
@@ -20,7 +20,7 @@ Game Over
 
 ## Live Demo
 
-🔗 https://cedarku.github.io/rock-paper-scissors/
+🔗 https://cedarku.github.io/the-odin-project/foundations/rock-paper-scissors
 
 ## Features
 

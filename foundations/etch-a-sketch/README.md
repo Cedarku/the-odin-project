@@ -6,7 +6,7 @@ Users can sketch by hovering over the grid, generate a new grid with a custom si
 
 ## Live Demo
 
-👉 **[Play Etch-a-Sketch](https://cedarku.github.io/etch-a-sketch/)**
+👉 **[Play Etch-a-Sketch](https://cedarku.github.io/the-odin-project/foundations/etch-a-sketch/)**
 
 ## Features
 

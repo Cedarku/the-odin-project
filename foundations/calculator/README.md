@@ -9,8 +9,8 @@ The main objective of this project is to build a functional calculator from scra
 <table align="center">
     <tr>
         <td align="center">
-        <img src="assets/kawaii-calculator.png" width="400"><br>
-        👉 <a href="https://cedarku.github.io/calculator/"><strong>View Live Demo</strong></a>
+        <img src="./assets/kawaii-calculator.png" width="400"><br>
+        👉 <a href="https://cedarku.github.io/the-odin-project/foundations/calculator/"><strong>View Live Demo</strong></a>
         </td>
     </tr>
 </table>
