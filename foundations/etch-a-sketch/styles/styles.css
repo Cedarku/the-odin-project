@@ -113,6 +113,13 @@
     opacity: 0.8;
 }
 
+#btn-clear {
+  margin-left: 5px;
+  width: 60px;
+  background-color: #d8d6e5;
+  color: #555;
+}
+
 .switch {
     position: relative;
     display: inline-block;

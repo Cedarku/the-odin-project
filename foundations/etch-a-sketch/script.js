@@ -1,5 +1,6 @@
 const grid = document.querySelector(".grid");
 const btnSize = document.querySelector(".btnSize");
+const btnClear = document.querySelector("#btn-clear");
 const modal = document.querySelector('#grid-modal');
 const gridForm = document.querySelector('#grid-form');
 const cancelBtn = document.querySelector('#cancel-btn');
@@ -25,6 +26,13 @@ gridForm.addEventListener("submit", (event) => {
 
     createGrid(size);
     modal.close();
+});
+
+btnClear.addEventListener("click", () => {
+    const squares = document.querySelectorAll(".square");
+    squares.forEach(square => {
+        square.style.backgroundColor = ""; 
+    });
 });
 
 function createGrid(size) {
