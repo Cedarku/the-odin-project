@@ -14,16 +14,34 @@
         <h1>Etch-a-Sketch</h1>
         <div class="main">
             <div class="menu">
-                <button class="btnSize">Grid size</button>
-                <div class="rainbowSwitch">
-                    <label class="switch">
-                        <input type="checkbox" id="rainbowMode">
-                        <span class="slider"></span>
-                    </label>
-                    <span>🌈</span>
+                <div class="menu-left">
+                    <button class="btnSize">Grid size</button>
+                </div>
+                <div class="menu-right">
+                    <div class="rainbow-wrapper">
+                        <label class="switch">
+                            <input type="checkbox" id="rainbow-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div>
+                        <span class="rainbow-icon">🌈</span>
+                        <span class="rainbow-tooltip" id="rainbow-tooltip">Active Rainbow mode!</span>
+                    </div>
                 </div>
             </div>
             <div class="grid"></div>
+            <dialog id="grid-modal">
+                <form method="dialog" id="grid-form">
+                    <h3>Grid Size</h3>
+                    <label for="grid-size-input">Enter the number of squares per side (1-100):</label>
+                    <input type="number" id="grid-size-input" min="1" max="100" placeholder="16" required>
+                    <div class="modal-buttons">
+                    <button type="button" id="cancel-btn" class="btn-cancel">Cancel</button>
+                    <button type="submit" id="confirm-btn" class="btn-confirm">Confirm</button>
+                    </div>
+                </form>
+            </dialog>
         </div>
         <footer>
             <p>The Odin Project <a href="https://github.com/Cedarku"><i class="fa-brands fa-github"></i></a> Cedarku 2026</p>

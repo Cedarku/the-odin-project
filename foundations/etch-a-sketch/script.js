@@ -1,29 +1,31 @@
 const grid = document.querySelector(".grid");
 const btnSize = document.querySelector(".btnSize");
+const modal = document.querySelector('#grid-modal');
+const gridForm = document.querySelector('#grid-form');
+const cancelBtn = document.querySelector('#cancel-btn');
+const sizeInput = document.querySelector('#grid-size-input'); 
 
 btnSize.addEventListener("click", () => {
-    const size = getSize();
-    if (size === null) {
-        return;
-    }
-    createGrid(size);
+    sizeInput.value = "";
+    modal.showModal();
 });
 
-function getSize() {
-    let input;
-    let size;
-    do {
-        input = prompt("Enter the number of squares per side (1-100):");
-        if (input === null) {
-            return null;
-        }
-        size = Number(input);
-        if (!Number.isInteger(size) || size < 1 || size > 100) {
-            alert("Please enter a whole number between 1 and 100.");
-        }
-    } while (!Number.isInteger(size) || size < 1 || size > 100);
-    return size;
-}
+cancelBtn.addEventListener("click", () => {
+    modal.close();
+});
+
+gridForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const size = Number(sizeInput.value);
+    if (!Number.isInteger(size) || size < 1 || size > 100) {
+        alert("Please enter a whole number between 1 and 100.");
+        return;
+    }
+
+    createGrid(size);
+    modal.close();
+});
 
 function createGrid(size) {
     grid.innerHTML = "";
@@ -50,12 +52,6 @@ function paintSquare(event) {
     }
 }
 
-let rainbowMode = false;
-const rainbowSwitch = document.querySelector("#rainbowMode");
-rainbowSwitch.addEventListener("change", () => {
-    rainbowMode = rainbowSwitch.checked;
-});
-
 function getRandomColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
@@ -63,5 +59,42 @@ function getRandomColor() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
+let rainbowMode = false;
+const rainbowSwitch = document.querySelector("#rainbow-toggle");
+const rainbowTooltip = document.querySelector('#rainbow-tooltip');
+const rainbowWrapper = document.querySelector('.rainbow-wrapper');
+let tooltipTimer;
+
+function showRainbowTooltip() {
+    rainbowTooltip.classList.add('show');
+    clearTimeout(tooltipTimer);
+    tooltipTimer = setTimeout(() => {
+        rainbowTooltip.classList.remove('show');
+    }, 2500);
+}
+
+rainbowSwitch.addEventListener("change", () => {
+    rainbowMode = rainbowSwitch.checked;
+
+    if (rainbowMode) {
+        showRainbowTooltip();
+    } else {
+        rainbowTooltip.classList.remove('show');
+        clearTimeout(tooltipTimer);
+    }
+});
+
+rainbowWrapper.addEventListener('mouseenter', () => {
+    if (rainbowMode) {
+        rainbowTooltip.classList.add('show');
+    }
+});
+
+rainbowWrapper.addEventListener('mouseleave', () => {
+    if (rainbowMode) {
+        rainbowTooltip.classList.remove('show');
+        clearTimeout(tooltipTimer);
+    }
+});
 
 createGrid(16);
