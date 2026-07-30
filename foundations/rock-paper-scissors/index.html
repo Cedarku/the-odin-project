@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors!</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
-    
     <script src="https://kit.fontawesome.com/ef26cee6e4.js" crossorigin="anonymous"></script>
-    
     <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
 <div class="container">
     <div>
         <h1>Rock • Paper • Scissors</h1>
-    
         <div class="choiceMenu">
             <p>Make your choice:</p>
             <div class="buttons">
@@ -27,7 +22,6 @@
                 <button class="btnScissors">✌️</button>
             </div>
         </div>
-
         <table id="display">
             <tr>
                 <th>You</th>
@@ -35,15 +29,15 @@
                 <th>Computer</th>
             </tr>
             <tr>
-                <td id="playerChoice"></td>
+                <td class="secondary-text" id="playerChoice"></td>
                 <td id="vs">VS</td>
-                <td id="computerChoice"></td>
+                <td class="secondary-text" id="computerChoice"></td>
             </tr>
             <tr>
                 <td colspan="3" id="roundResult"></td>
             </tr>
             <tr>
-                <td colspan="3">Score:</td>
+                <td class="secondary-text" colspan="3">Score 5 points to win the game:</td>
             </tr>
             <tr>
                 <td id="playerScore">0</td>
@@ -51,7 +45,6 @@
                 <td id="computerScore">0</td>
             </tr>
         </table>
-    
         <h2 id="finalMessage"></h2>
         <div class="finalScoreTable">
             <div class="finalScoreHeader">
@@ -71,8 +64,6 @@
         </footer>
     </div>
 </div>
-
 <script src="./script.js"></script>
-
 </body>
 </html>
