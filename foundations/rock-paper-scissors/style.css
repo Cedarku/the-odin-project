@@ -7,18 +7,18 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#F7F6F2;
-    min-height:100vh;
-
+    height:100vh;
     display:flex;
     justify-content:center;
-    align-items:center;
-
     color:#2D3142;
 }
 
 .container{
     width:min(90%,550px);
-    text-align:center;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    text-align: center;
 }
 
 h1, p{
@@ -29,7 +29,8 @@ h1, p{
 }
 
 h1{
-    margin-bottom:40px;
+    margin-top:100px;
+    margin-bottom:60px;
     font-size:3.5rem;
 }
 
@@ -235,7 +236,6 @@ footer a {
 footer p {
   font-family: inherit;
   font-size: inherit;
-  margin-bottom: 0;
 }
 
 footer a:hover {
