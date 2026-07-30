@@ -61,39 +61,41 @@ function getRandomColor() {
 
 let rainbowMode = false;
 const rainbowSwitch = document.querySelector("#rainbow-toggle");
-const rainbowTooltip = document.querySelector('#rainbow-tooltip');
-const rainbowWrapper = document.querySelector('.rainbow-wrapper');
-let tooltipTimer;
+const rainbowText = document.querySelector('#rainbow-text');
+let textTimer;
+let hideTimer;
 
-function showRainbowTooltip() {
-    rainbowTooltip.classList.add('show');
-    clearTimeout(tooltipTimer);
-    tooltipTimer = setTimeout(() => {
-        rainbowTooltip.classList.remove('show');
-    }, 2500);
+function hideRainbowText() {
+    rainbowText.classList.remove('show');
+    rainbowText.classList.add('hide');
+    
+    clearTimeout(hideTimer);
+
+    hideTimer = setTimeout(() => {
+        rainbowText.classList.remove('hide');
+    }, 300);
+}
+
+function showRainbowText() {
+    rainbowText.classList.remove('hide');
+
+    void rainbowText.offsetWidth; 
+    
+    rainbowText.classList.add('show');
+    clearTimeout(textTimer);
+    
+    textTimer = setTimeout(() => {
+        hideRainbowText();
+    }, 2000); 
 }
 
 rainbowSwitch.addEventListener("change", () => {
     rainbowMode = rainbowSwitch.checked;
-
     if (rainbowMode) {
-        showRainbowTooltip();
+        showRainbowText();
     } else {
-        rainbowTooltip.classList.remove('show');
-        clearTimeout(tooltipTimer);
-    }
-});
-
-rainbowWrapper.addEventListener('mouseenter', () => {
-    if (rainbowMode) {
-        rainbowTooltip.classList.add('show');
-    }
-});
-
-rainbowWrapper.addEventListener('mouseleave', () => {
-    if (rainbowMode) {
-        rainbowTooltip.classList.remove('show');
-        clearTimeout(tooltipTimer);
+        hideRainbowText();
+        clearTimeout(textTimer);
     }
 });
 
