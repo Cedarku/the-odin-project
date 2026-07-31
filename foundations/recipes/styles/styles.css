@@ -130,3 +130,38 @@ footer a {
 footer a:hover {
   opacity: 0.6;
 }
+
+/* Estilos para la lista de Steps (círculos verdes) */
+.recipe-body .recipe-card:last-child ol {
+    list-style: none;
+    counter-reset: step-counter;
+    padding-left: 0;
+}
+
+.recipe-body .recipe-card:last-child ol li {
+    counter-increment: step-counter;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.recipe-body .recipe-card:last-child ol li::before {
+    content: counter(step-counter);
+    background-color: #87b484; /* Mismo verde que el body */
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    margin-top: 5px; /* Para alinear con el texto del párrafo */
+}
+
+.recipe-body .recipe-card:last-child ol li p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
