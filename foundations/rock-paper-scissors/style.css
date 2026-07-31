@@ -56,7 +56,7 @@ p {
     border-radius:18px;
     cursor:pointer;
     transition:.25s;
-    box-shadow:0 8px 18px rgba(0,0,0,.15);
+    box-shadow:0 6px 16px rgba(0,0,0,.1);
 }
 
 .buttons button:hover{
@@ -92,13 +92,10 @@ p {
     width:100%;
     table-layout: fixed;
     margin:25px auto;
-
     border-collapse:collapse;
-
     background:white;
     border-radius:18px;
     overflow:hidden;
-
     box-shadow:0 8px 18px rgba(0,0,0,.08);
 }
 
@@ -111,7 +108,6 @@ p {
 
 #display td{
     padding:18px;
-    font-size:1.1rem;
 }
 
 #display #vs {
@@ -134,9 +130,14 @@ p {
     font-weight: 400;
 }
 
+#playerChoice,
+#computerChoice {
+    font-size: 1.5rem;
+}
+
 #playerScore,
 #computerScore{
-    font-size:2rem;
+    font-size:1.2rem;
     color:#4F6D7A;
 }
 
@@ -153,11 +154,9 @@ p {
     width:50%;
     margin: auto;
     margin-bottom: 40px;
-
     background:white;
     border-radius:18px;
     overflow:hidden;
-
     box-shadow:0 8px 18px rgba(0,0,0,.08);
 }
 

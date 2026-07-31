@@ -68,8 +68,14 @@ function updateDisplay(playerChoice, computerChoice, roundResult, playerScore, c
         const playerScoreCell = document.getElementById("playerScore");
         const computerScoreCell = document.getElementById("computerScore");
 
-        playerChoiceCell.textContent = playerChoice;
-        computerChoiceCell.textContent = computerChoice;
+        const emojis = {
+            "Rock": "✊",
+            "Paper": "🖐️",
+            "Scissors": "✌️"
+        };
+
+        playerChoiceCell.innerHTML = `${emojis[playerChoice]}<br>${playerChoice}`;
+        computerChoiceCell.innerHTML = `${emojis[computerChoice]}<br>${computerChoice}`;
         roundResultCell.textContent = roundResult;
         playerScoreCell.textContent = playerScore;
         computerScoreCell.textContent = computerScore;
