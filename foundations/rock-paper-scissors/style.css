@@ -118,7 +118,7 @@ p {
     color:#FF7F6A;
     font-family: "Darumadrop One", sans-serif;
     font-style: italic;
-    font-size:2rem;
+    font-size:3rem;
 }
 
 #roundResult{
@@ -141,8 +141,11 @@ p {
 }
 
 #finalMessage{
+    margin-bottom: 30px;
     color:#FF7F6A;
-    font-size:1.8rem;
+    font-family: "Darumadrop One", sans-serif;
+    font-weight: 400;
+    font-size:3rem;
     min-height:45px;
 }
 
@@ -191,6 +194,7 @@ p {
     background:#adcedc;
     color:white;
     font-size:1.2rem;
+    font-weight: bold;
     cursor:pointer;
     transition:.25s;
     box-shadow:0 8px 18px rgba(0,0,0,.15);
