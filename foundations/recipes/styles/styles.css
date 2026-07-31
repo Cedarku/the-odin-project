@@ -68,11 +68,13 @@ h1.title {
     border-radius: 0.5em 0.5em 0 0;
     margin-left: 50px;
     padding: 5px 10px;
+    width: fit-content;
+    align-self: flex-start;
 }
 
 .recipe-content {
     background-color: #e0efdf;
-    margin: auto 30px;
+    margin: 0 30px auto;
     padding: 20px;
     border-radius: 1em;
     box-shadow: 0 2px 10px rgb(32, 27, 27, 0.1);
@@ -89,6 +91,15 @@ h1.title {
     border-radius: 1em;
     margin:20px;
     padding: 10px;
+}
+
+.recipe-title {
+    display: flex;
+}
+
+.recipe-body {
+    display: flex;
+    justify-content: center;
 }
 
 footer {
